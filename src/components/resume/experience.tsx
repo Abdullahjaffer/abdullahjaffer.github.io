@@ -31,11 +31,13 @@ const Experience = () => {
 							</div>
 						</AccordionTrigger>
 						<AccordionContent>
-							<ul className="text-sm">
-								{experience.work.map((work) => (
-									<li key={work}>{work}</li>
-								))}
-							</ul>
+							<div>
+								<ul className="list-disc">
+									{experience.work.map((work) => (
+										<li key={work}>{work}</li>
+									))}
+								</ul>
+							</div>
 						</AccordionContent>
 					</AccordionItem>
 				))}

@@ -4,10 +4,10 @@ const TechStacks = () => {
 	return (
 		<section>
 			<h3 className="text-2xl underline mb-2">Tech Stacks</h3>
-			<ul>
+			<ul className="list-disc">
 				{Object.keys(TechStackContent).map((name) => (
 					<li key={name}>
-						<span className="font-medium capitalize">{name}: </span>
+						<span className="font-semibold capitalize">{name}: </span>
 						{(TechStackContent as any)[name].join(", ").toLowerCase()}
 					</li>
 				))}

@@ -14,8 +14,6 @@ export default function Home() {
 		<>
 			<Intro />
 			<Separator className="my-4" />
-			<TechStacks />
-			<Separator className="my-4" />
 			<Alert>
 				<RocketIcon className="h-4 w-4" />
 				<AlertTitle>Looking for projects?</AlertTitle>
@@ -30,6 +28,8 @@ export default function Home() {
 					.
 				</AlertDescription>
 			</Alert>
+			<Separator className="my-4" />
+			<TechStacks />
 			<Separator className="my-4" />
 
 			<Experience />
