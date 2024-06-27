@@ -1,4 +1,6 @@
+import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
+import { Separator } from "./ui/separator";
 
 function ArrowIcon() {
 	return (
@@ -19,8 +21,10 @@ function ArrowIcon() {
 
 export default function Footer() {
 	return (
-		<footer className="mb-16">
-			{/* <ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
+		<>
+			<Separator className="my-4" />
+			<footer className="mb-16 flex justify-between items-center">
+				{/* <ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
 				<li>
 					<a
 						className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
@@ -55,28 +59,42 @@ export default function Footer() {
 					</a>
 				</li>
 			</ul> */}
-			<div className="mt-8 text-neutral-600 dark:text-neutral-300">
-				Built with{" "}
-				<Link
-					className="inline-flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
-					rel="noopener noreferrer"
-					target="_blank"
-					href="https://vercel.com/templates/next.js/portfolio-starter-kit"
-				>
-					<ArrowIcon />
-					<p className="ml-2">Next.js</p>
-				</Link>{" "}
-				and{" "}
-				<Link
-					className="inline-flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
-					rel="noopener noreferrer"
-					target="_blank"
-					href="https://ui.shadcn.com/"
-				>
-					<ArrowIcon />
-					<p className="ml-2">shadcn/ui</p>
-				</Link>{" "}
-			</div>
-		</footer>
+				<div className=" text-neutral-600 dark:text-neutral-300">
+					Built with{" "}
+					<Link
+						className="inline-flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+						rel="noopener noreferrer"
+						target="_blank"
+						href="https://vercel.com/templates/next.js/portfolio-starter-kit"
+					>
+						<ArrowIcon />
+						<p className="ml-2">Next.js</p>
+					</Link>{" "}
+					and{" "}
+					<Link
+						className="inline-flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+						rel="noopener noreferrer"
+						target="_blank"
+						href="https://ui.shadcn.com/"
+					>
+						<ArrowIcon />
+						<p className="ml-2">shadcn/ui</p>
+					</Link>{" "}
+				</div>
+				<div>
+					<div className="py-1 px-2 m-1 flex gap-2 items-center">
+						<Link href={"https://github.com/abdullahjaffer"} target="_blank">
+							<GitHubLogoIcon width={24} height={24} />
+						</Link>
+						<Link
+							href={"https://www.linkedin.com/in/abdullahjaffer/"}
+							target="_blank"
+						>
+							<LinkedInLogoIcon width={24} height={24} />
+						</Link>
+					</div>
+				</div>
+			</footer>
+		</>
 	);
 }

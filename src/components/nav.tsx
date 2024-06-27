@@ -1,5 +1,6 @@
+import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
-import ColorModeToggle from "./colorModeToggle";
+import { ModeToggle } from "./colorModeToggle";
 
 const navItems = {
 	"/": {
@@ -31,8 +32,17 @@ export function Navbar() {
 							);
 						})}
 					</div>
-					<div className="py-1 px-2 m-1">
-						<ColorModeToggle />
+					<div className="py-1 px-2 m-1 flex gap-2 items-center">
+						<Link href={"https://github.com/abdullahjaffer"} target="_blank">
+							<GitHubLogoIcon width={24} height={24} />
+						</Link>
+						<Link
+							href={"https://www.linkedin.com/in/abdullahjaffer/"}
+							target="_blank"
+						>
+							<LinkedInLogoIcon width={24} height={24} />
+						</Link>
+						<ModeToggle />
 					</div>
 				</nav>
 			</div>

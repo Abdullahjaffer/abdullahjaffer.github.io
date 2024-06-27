@@ -21,7 +21,7 @@ export default function Home() {
 					Checkout my awesome projects{" "}
 					<Link
 						href={"/projects"}
-						className="transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+						className="transition-all hover:text-neutral-800 dark:hover:text-neutral-100 underline"
 					>
 						here
 					</Link>
